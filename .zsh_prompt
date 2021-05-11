@@ -1,0 +1,2 @@
+PROMPT='%{$reset_color%}%{$fg_bold[white]%}(/bin/zsh) %{$fg_bold[magenta]%}%D{%H:%M:%S} %{$fg_bold[cyan]%}%n%{$fg_bold[white]%}@%{$fg_bold[green]%}%m%{$fg_bold[white]%}:%{$fg_bold[yellow]%}%~%{$fg_bold[white]%}$ %{$reset_color%}'
+RPROMPT='%(?,%{$fg_bold[yellow]%}%? %{$fg_bold[green]%}^_^,%{$fg_bold[yellow]%}%? %{$fg_bold[red]%};_;)%{$reset_color%}'

@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/data/home/kevthoma/Google_Drive/git-repos/devops/dcos-ansible/group_vars/all'
+let g:netrw_dirhist_2='/data/home/kevthoma/chef-repo/cookbooks/minio_server/attributes'
+let g:netrw_dirhist_3='/data/home/kevthoma/terraform-repo/gcp/dev/gke-test-cluster'
+let g:netrw_dirhist_4='/data/home/kevthoma/devops/ansible-playbooks/roles/chef'
+let g:netrw_dirhist_5='/data/home/kevthoma/chef-repo/cookbooks/sifi_nfs'
+let g:netrw_dirhist_6='/data/home/kevthoma/chef-repo/cookbooks/sifi_users/recipes'
+let g:netrw_dirhist_7='/data/home/kevthoma/terraform-repo/modules/global_vars'
+let g:netrw_dirhist_8='/data/home/kevthoma/terraform-repo/gke-development/cft-gke-test'

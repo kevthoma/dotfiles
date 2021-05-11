@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 # Install command-line tools using Homebrew.
+if ! type "brew"; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";
+fi;
+# Install brew if not installed
 
 # Make sure we’re using the latest Homebrew.
 brew update
