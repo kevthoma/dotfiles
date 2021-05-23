@@ -1,4 +1,4 @@
 export EDITOR='vim'
 export PATH=$HOME/bin:$PATH
-export PATH=$( find $HOME/bin -type d -name bin -printf "%p:" )$PATH
+#export PATH=$( find $HOME/bin -type d -name bin -printf "%p:" )$PATH
 #export PATH=$( find $HOME/.pyenv -type d -name bin -printf "%p:" )$PATH
