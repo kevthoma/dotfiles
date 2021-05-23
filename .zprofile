@@ -8,7 +8,7 @@ unset file;
 
 # Load .macos dotfile if on MacOS
 if [ $(uname) = "Darwin" ]; then
-    [-r ".macos"] && [ -f ".macos" ] && source ".macos";
+    [ -r ".macos" ] && [ -f ".macos" ] && source ".macos";
 fi;
 
 autoload -U compinit
