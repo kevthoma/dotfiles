@@ -8,7 +8,8 @@ function doIt() {
 	if [ ! -d $HOME/bin ]; then
 	  mkdir $HOME/bin
 	fi;
-	rsync --exclude ".git/" \
+    if [ $(uname) = "Darwin" ]; then
+	  rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
@@ -17,6 +18,18 @@ function doIt() {
 		--exclude "unused/" \
         --exclude "*.swp" \
 		-avh --no-perms . ~;
+    else
+	  rsync --exclude ".git/" \
+	    --exclude ".DS_Store" \
+		--exclude ".osx" \
+		--exclude "bootstrap.sh" \
+		--exclude "README.md" \
+		--exclude "LICENSE-MIT.txt" \
+		--exclude "unused/" \
+        --exclude "*.swp" \
+        --exclude ".macos" \
+		-avh --no-perms . ~;
+    fi
 	source ~/.bash_profile;
 }
 

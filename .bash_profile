@@ -6,6 +6,11 @@ for file in ~/.{bash_prompt,exports,aliases,extra}; do
 done;
 unset file;
 
+# Load .macos dotfile if on MacOS
+if [ $(uname) = "Darwin" ]; then
+    [-r ".macos"] && [ -f ".macos" ] && source ".macos";
+fi;
+
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
 

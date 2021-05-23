@@ -6,6 +6,11 @@ for file in ~/.{zsh_prompt,exports,aliases,extra}; do
 done;
 unset file;
 
+# Load .macos dotfile if on MacOS
+if [ $(uname) = "Darwin" ]; then
+    [-r ".macos"] && [ -f ".macos" ] && source ".macos";
+fi;
+
 autoload -U compinit
 compinit
 
