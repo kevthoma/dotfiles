@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # Install command-line tools using Homebrew.
+
+# Install brew if not installed
 if ! type "brew"; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";
 fi;
-# Install brew if not installed
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -24,8 +25,8 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# Install GNU `sed`
+brew install gnu-sed
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
@@ -37,14 +38,16 @@ brew install bash-completion2
 #fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
-# Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+# Install MacVim (gvim)
 brew install macvim
+
+# Install more recent versions of some macOS tools.
+#brew install vim --with-override-system-vi
 brew install grep
 #brew install openssh
 #brew install screen

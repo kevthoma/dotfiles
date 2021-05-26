@@ -5,31 +5,23 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin main;
 
 function doIt() {
+    if [ $(uname) = "Darwin" ]; then
+      source brew.sh
+    fi
+
 	if [ ! -d $HOME/bin ]; then
 	  mkdir $HOME/bin
 	fi;
-    if [ $(uname) = "Darwin" ]; then
-	  rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
-		--exclude "unused/" \
-        --exclude "*.swp" \
-		-avh --no-perms . ~;
-    else
-	  rsync --exclude ".git/" \
-	    --exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
-		--exclude "unused/" \
-        --exclude "*.swp" \
-        --exclude ".macos" \
-		-avh --no-perms . ~;
-    fi
+	rsync --exclude ".git/" \
+      --exclude ".DS_Store" \
+      --exclude ".osx" \
+      --exclude "bootstrap.sh" \
+      --exclude "README.md" \
+      --exclude "LICENSE-MIT.txt" \
+      --exclude "unused/" \
+      --exclude "*.swp" \
+      --exclude "brew.sh" \
+      -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 
