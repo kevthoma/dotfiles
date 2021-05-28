@@ -2,9 +2,13 @@
 
 export EDITOR='vim'
 export PATH=$HOME/bin:$PATH
-if [ $(uname) = "Darwin" ]; then
-  export PATH=$( gfind $HOME/bin -type d -name bin -printf "%p:" )$PATH
+if [ $(uname) = "Darwin" ] 
+then
+    export PATH=$( gfind $HOME/bin -type d -name bin -printf "%p:" )$PATH
 else
-  export PATH=$( find $HOME/bin -type d -name bin -printf "%p:" )$PATH
+    export PATH=$( find $HOME/bin -type d -name bin -printf "%p:" )$PATH
 fi
-#export PATH=$( find $HOME/.pyenv -type d -name bin -printf "%p:" )$PATH
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"

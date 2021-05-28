@@ -47,7 +47,8 @@ brew install gnupg
 brew install macvim
 
 # Install PyEnv
-brew install pyenv
+#brew install pyenv
+curl https://pyenv.run | bash
 
 # Install more recent versions of some macOS tools.
 #brew install vim --with-override-system-vi
