@@ -46,6 +46,9 @@ brew install gnupg
 # Install MacVim (gvim)
 brew install macvim
 
+# Install PyEnv
+brew install pyenv
+
 # Install more recent versions of some macOS tools.
 #brew install vim --with-override-system-vi
 brew install grep
