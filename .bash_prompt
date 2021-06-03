@@ -16,4 +16,5 @@ export COLOR_LIGHT_CYAN='\e[1;36m'
 export COLOR_LIGHT_GRAY='\e[0;37m'
 export COLOR_WHITE='\e[1;37m'
 
-PS1="\`if [ \$? = 0 ]; then echo -e '\[${COLOR_YELLOW}\]^_^' ; else echo -e '\[${COLOR_LIGHT_RED}\];_;' ; fi\` \[${COLOR_NC}\](/bin/bash) \[${COLOR_LIGHT_PURPLE}\]\t\[${COLOR_NC}\] \[${COLOR_LIGHT_CYAN}\]\u\[${COLOR_LIGHT_GRAY}\]@\[${COLOR_LIGHT_GREEN}\]\h:\[${COLOR_YELLOW}\]\w\[${COLOR_NC}\]$\[${COLOR_NC}\] "
+PS1="\`if [ \$? = 0 ]; then echo -e '\[${COLOR_YELLOW}\]^_^' ; else echo -e '\[${COLOR_LIGHT_RED}\];_;' ; fi\` \[${COLOR_WHITE}\](bash) \[${COLOR_LIGHT_PURPLE}\]\t\[${COLOR_NC}\] \[${COLOR_LIGHT_CYAN}\]\u\[${COLOR_WHITE}\]@\[${COLOR_LIGHT_GREEN}\]\h:\[${COLOR_YELLOW}\]\w
+\[${COLOR_WHITE}\]$\[${COLOR_NC}\] "
