@@ -5,10 +5,6 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin main;
 
 function doIt() {
-    if [ $(uname) = "Darwin" ]; then
-      source brew.sh
-    fi
-
 	if [ ! -d $HOME/bin ]; then
 	  mkdir $HOME/bin
 	fi;
@@ -23,6 +19,10 @@ function doIt() {
       --exclude "brew.sh" \
       -avh --no-perms . ~;
 	source ~/.bash_profile;
+
+    if [ $(uname) = "Darwin" ]; then
+      source brew.sh
+    fi
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
